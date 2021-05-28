@@ -12,10 +12,14 @@
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html#modules-specific-to-functionality -->
+    <depends>com.intellij.java</depends>
+
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/Markdown.xml"/>
         <defaultLiveTemplates file="/liveTemplates/JUnit.xml"/>
         <liveTemplateContext implementation="com.roozky.codeless.livetemplates.MavenContextType"/>
+        <liveTemplateContext implementation="com.roozky.codeless.livetemplates.AvroSchemaContextType"/>
     </extensions>
 
     <actions>
