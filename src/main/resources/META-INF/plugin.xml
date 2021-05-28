@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.roozky.codeless.codeless-plugin</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/liveTemplates/Markdown.xml"/>
+        <defaultLiveTemplates file="/liveTemplates/JUnit.xml"/>
+        <liveTemplateContext implementation="com.roozky.codeless.livetemplates.MavenContextType"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.roozky.codeless.action.PopupDialogAction" class="com.roozky.codeless.action.PopupDialogAction"
+                text="MyPopup">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>

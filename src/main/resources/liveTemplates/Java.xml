@@ -1,0 +1,17 @@
+<templateSet group="Java">
+    <template name="test"
+              value="@org.junit.jupiter.api.Test&#10;void should$NAME$() {&#10;    &#10;}"
+              description=""
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true"/>
+        <context>
+            <option name="JAVA_DECLARATION" value="true"/>
+        </context>
+    </template>
+    <template name="beach" value="@org.junit.jupiter.api.BeforeEach&#10;public void beforeEach() {&#10;    $END$&#10;}" description="@BeforeEach" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="JAVA_DECLARATION" value="true" />
+        </context>
+    </template>
+</templateSet>
